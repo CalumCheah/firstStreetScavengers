@@ -1,0 +1,32 @@
+.card {
+    border-style: solid;
+    border-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-color: pink;
+
+    width: 20em;
+    height: 20em;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.complete {
+    background-color: rgb(59, 238, 59);
+}
+
+.cancel {
+    background-color: red;
+}
