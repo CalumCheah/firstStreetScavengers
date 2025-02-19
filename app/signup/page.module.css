@@ -13,7 +13,8 @@
     width: 30%;
     padding: 2em;
     border-radius: 10px;
-    border: rgba(255, 255, 255, .1) solid 2px;
+    border: pink solid 2px;
+    background-color: pink;
     align-items: center;
     justify-content: center;
     gap: 1em;
