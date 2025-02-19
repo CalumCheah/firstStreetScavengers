@@ -1,0 +1,47 @@
+.main {
+    height: 100%;
+    width: 100%;
+    border: red dotted 1px;
+    justify-items: center;
+    align-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 30%;
+    padding: 2em;
+    border-radius: 10px;
+    border: rgba(255, 255, 255, .1) solid 2px;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.title {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.label {
+    opacity: .8;
+    font-size: 1em;
+}
+
+.textInput {
+    height: 2em;
+}
+
+.submit {
+    padding: .5em;
+    font-size: 1em;
+    background-color: pink;
+    color: black;
+}
