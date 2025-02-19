@@ -10,10 +10,21 @@
 
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+}
+
+.info {
+    width: 100%;
+}
+
+.infoText {
+    font-size: 1.5em;
+}
+
+.label {
+    opacity: .6;
 }
 
 .buttonContainer {
@@ -24,9 +35,19 @@
 }
 
 .complete {
-    background-color: rgb(59, 238, 59);
+    background-color: rgb(102, 202, 102);
+    border-color: rgb(102, 202, 102);
+    width: 7.5em;
+    height: 2em;
 }
 
 .cancel {
-    background-color: red;
+    background-color: rgb(255, 86, 86);
+    border-color: rgb(255, 86, 86);
+    width: 7.5em;
+    height: 2em;
+}
+
+.buttonText {
+    color: white;
 }

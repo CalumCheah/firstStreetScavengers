@@ -1,0 +1,32 @@
+.sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    right: 0;
+
+    width: 10em;
+    height: 100%;
+    border-left: 3px solid pink;
+}
+
+.create {
+    background-color: rgb(102, 202, 102);
+    border-color: rgb(102, 202, 102);
+    width: 8em;
+    height: 4em;
+}
+
+.delete {
+    background-color: rgb(255, 86, 86);
+    border-color: rgb(255, 86, 86);
+    width: 8em;
+    height: 4em;
+}
+
+.buttonText {
+    font-size: 1.5em;
+    color: white;
+}

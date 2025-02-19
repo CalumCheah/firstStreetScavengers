@@ -5,16 +5,23 @@ const ReservationCard = ({ name, contact, product }: { name: string, contact: st
     return (
         <div className={styles.card}>
             <div className={styles.info}>
-                <p>{name}</p>
-                <p>{contact}</p>
-                <p>{product}</p>
+                <p className={styles.label}>Name</p>
+                <p className={styles.infoText}>{name}</p>
+                <p className={styles.label}>Contact Info</p>
+                <p className={styles.infoText}>{contact}</p>
+                <p className={styles.label}>Item</p>
+                <p className={styles.infoText}>{product}</p>
             </div>
             <div className={styles.buttonContainer}>
                 <button className={styles.complete}>
-                    complete
+                    <p className={styles.buttonText}>
+                        Complete
+                    </p>
                 </button>
                 <button className={styles.cancel}>
-                    cancel
+                    <p className={styles.buttonText}>
+                        Cancel
+                    </p>
                 </button>
             </div>
         </div>
