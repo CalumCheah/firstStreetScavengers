@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Navbar from "../components/navbar/navbar";
 import ReservationCard from "../components/Reservation Card/reservationCard";
+import Sidebar from "../components/sidebar/sidebar";
 
 const AdminDashboard = () => {
 
@@ -19,6 +20,7 @@ const AdminDashboard = () => {
                     product="yzy pods"
                  />
             </div>
+            <Sidebar />
         </main>
     )
 }
