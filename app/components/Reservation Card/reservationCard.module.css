@@ -1,9 +1,6 @@
 .card {
-    border-style: solid;
-    border-width: 2px;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    border-color: pink;
+    border: color-mix(in srgb, var(--matte-black), transparent 25%) solid 2px;
+    border-radius: 10px;
 
     width: 20em;
     height: 20em;
@@ -13,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1em;
+    background-color: color-mix(in srgb, var(--matte-black), transparent 50%);
 }
 
 .info {
@@ -34,20 +32,14 @@
     width: 100%;
 }
 
-.complete {
-    background-color: rgb(102, 202, 102);
-    border-color: rgb(102, 202, 102);
-    width: 7.5em;
-    height: 2em;
-}
-
-.cancel {
-    background-color: rgb(255, 86, 86);
-    border-color: rgb(255, 86, 86);
+.button {
+    background-color: #fbdada;
+    border-color: #fbdada;
     width: 7.5em;
     height: 2em;
 }
 
 .buttonText {
-    color: white;
+    color: black;
+    font-family: "Unbounded", serif;
 }

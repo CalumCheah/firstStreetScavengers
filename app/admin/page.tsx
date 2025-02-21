@@ -1,9 +1,14 @@
+'use client'
+
 import styles from "./page.module.css";
 import Navbar from "../components/navbar/navbar";
 import ReservationCard from "../components/Reservation Card/reservationCard";
 import Sidebar from "../components/sidebar/sidebar";
+import ButtonContainer from "./buttonContainer";
+import { useState } from "react";
 
 const AdminDashboard = () => {
+    const [modifyItemsOpen, setModifyItemsOpen] = useState(false)
 
     return (
         <main className={styles.main}>
@@ -20,7 +25,7 @@ const AdminDashboard = () => {
                     product="yzy pods"
                  />
             </div>
-            <Sidebar />
+            <ButtonContainer />
         </main>
     )
 }

@@ -13,12 +13,12 @@ const ReservationCard = ({ name, contact, product }: { name: string, contact: st
                 <p className={styles.infoText}>{product}</p>
             </div>
             <div className={styles.buttonContainer}>
-                <button className={styles.complete}>
+                <button className={styles.button}>
                     <p className={styles.buttonText}>
                         Complete
                     </p>
                 </button>
-                <button className={styles.cancel}>
+                <button className={styles.button}>
                     <p className={styles.buttonText}>
                         Cancel
                     </p>
