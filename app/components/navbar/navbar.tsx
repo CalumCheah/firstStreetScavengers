@@ -5,9 +5,13 @@ const Navbar = () => {
 
     return (
         <div className={styles.navbar}>
-            <p className={styles.title}>
-                <Link href="/">First Street Scavengers</Link>
-            </p>
+            <div className={styles.items}>
+                <Link className={styles.title} href="/">FSS</Link>
+                <div className={styles.buttons}>
+                    <Link href="/login">Log In</Link>
+                    <Link href="/signup">Sign Up</Link>
+                </div>
+            </div>
         </div>
     )
 }
