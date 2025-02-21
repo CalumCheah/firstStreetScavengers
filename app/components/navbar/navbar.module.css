@@ -1,15 +1,39 @@
 .navbar {
-    border-bottom: 3px solid pink;
+    border-bottom: 3px solid color-mix(in srgb, var(--matte-black), transparent 50%);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 3em;
-    box-shadow: 0 0 1em pink;
-    background-color: white;
+    background-color: color-mix(in srgb, var(--matte-black), transparent 75%);
     z-index: 50;
+
+    font-family: "Unbounded", serif;
+    color: var(--misty-pink);
+
+    .items {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1em;
+        width: 100%
+    }
+}
+
+.title {
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    font-size: 1em;
 }

@@ -58,3 +58,9 @@
     color: var(--background);
     font-weight: 500;
 }
+
+.signup {
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--misty-pink), transparent 25%);
+}
