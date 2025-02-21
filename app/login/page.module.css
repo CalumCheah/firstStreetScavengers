@@ -2,17 +2,27 @@
     height: 100%;
     width: 100%;
     justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login {
+    justify-items: center;
     align-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .form {
+    border: color-mix(in srgb, var(--matte-black), transparent 50%) solid 2px;
+
     display: flex;
     flex-direction: column;
     height: 50%;
     width: 30%;
     padding: 2em;
     border-radius: 10px;
-    border: color-mix(in srgb, var(--matte-black), transparent 50%) solid 2px;
     align-items: center;
     justify-content: center;
     gap: 1em;
