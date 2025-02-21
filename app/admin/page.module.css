@@ -15,3 +15,30 @@
     margin: 1em;
     margin-top: 0em;
 }
+
+.modButton {
+    background-color: #fbdada;
+    border-color: #fbdada;
+    width: 12em;
+    height: 3em;
+    box-shadow: 0 0 1em #000000;
+    margin: 1em;
+}
+
+.container {
+    position: fixed;
+    background-color: var(--matte-black);
+    right: 0;
+    bottom: 0;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    width: 15%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: color-mix(in srgb, var(--matte-black), transparent 50%);
+    border: color-mix(in srgb, var(--matte-black), transparent 25%) solid 2px;
+    border-radius: 10px;
+}
