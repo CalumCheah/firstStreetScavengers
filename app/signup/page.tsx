@@ -16,7 +16,7 @@ const SignUp = () => {
                     <label className={styles.label}>Username</label>
                     <input className={styles.textInput} type="text" id="username" name="username"/>
                     <label className={styles.label}>Password</label>
-                    <input className={styles.textInput} type="text" id="password" name="password"/>
+                    <input className={styles.textInput} type="password" id="password" name="password"/>
                     <label className={styles.label}>Contact Info</label>
                     <input className={styles.textInput} type="text" id="contact" name="contact" placeholder="e.g. IG tag, phone number, email"/>
                 </div>
