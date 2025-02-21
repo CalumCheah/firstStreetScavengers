@@ -2,7 +2,7 @@
     border-bottom: 3px solid color-mix(in srgb, var(--matte-black), transparent 50%);
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     align-items: center;
@@ -14,15 +14,15 @@
 
     font-family: "Unbounded", serif;
     color: var(--misty-pink);
+}
 
-    .items {
-        position: sticky;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 1em;
-        width: 100%
-    }
+.items {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+    width: 100%
 }
 
 .title {
