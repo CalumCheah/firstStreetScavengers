@@ -4,3 +4,49 @@
     align-items: center;
     justify-content: center;
 }
+
+.label {
+    opacity: .5;
+    font-size: 1em;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    width: 75%;
+}
+
+.textInput {
+    height: 2em;
+    background-color: color-mix(in srgb, var(--matte-black), transparent 60%);
+    border: color-mix(in srgb, black, transparent 0%) solid 1px;
+    border-radius: 3px;
+    padding: .5em;
+    color: var(--foreground)
+}
+
+.submit {
+    margin-top: 1em;
+    padding: .25em;
+    font-size: 1em;
+    width: 75%;
+    background-color: color-mix(in srgb, var(--misty-pink), transparent 0%);
+    color: black;
+    border: color-mix(in srgb, var(--misty-pink), transparent 50%) solid 1px;
+    border-radius: 10px;
+    color: var(--background);
+    font-weight: 500;
+}
+
+.form {
+    border: color-mix(in srgb, var(--matte-black), transparent 50%) solid 2px;
+
+    margin-top: 2em;
+    flex-direction: column;
+    height: 50%;
+    width: 80%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}

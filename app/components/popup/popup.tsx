@@ -10,14 +10,24 @@ const Popup = ( {setPopupOpen}: {setPopupOpen: Dispatch<SetStateAction<boolean>>
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
-                <button className={styles.close} onClick={()=>setPopupOpen(false)}>Close</button> 
-                <button className={styles.button} onClick={()=>setModType("create")}>Create Item</button>
-                <button className={styles.button} onClick={()=>setModType("delete")}>Delete Item</button>
-
+                <div className={styles.barContainer}>
+                    <button className={styles.close} onClick={()=>setPopupOpen(false)}>Close</button> 
+                </div>
+                
+                <div className={styles.barContainer}></div>
+                <div className={styles.barContainer}></div>
+                
+                <div className={styles.barButtonsContainer}>
+                    <button className={styles.button} onClick={()=>setModType("create")}>Create Item</button>
+                    <button className={styles.button} onClick={()=>setModType("delete")}>Delete Item</button>
+                </div>
+                
+                <div className={styles.modContainer}>
                 {modType == "create" 
                 ? <CreateMenu />
                 : <DeleteMenu />
                 }
+                </div>
 
             </div>
         </div>  

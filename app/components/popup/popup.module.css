@@ -13,30 +13,27 @@
 .menu {
     height: 50%;
     width: 50%;
-    align-content: center;
 
-    background-color: color-mix(in srgb, var(--matte-black), transparent 50%);
+    background-color: color-mix(in srgb, var(--matte-black), transparent 0%);
     border: color-mix(in srgb, var(--matte-black), transparent 25%) solid 2px;
     border-radius: 10px;
-    background-color: var(--matte-black);
     padding: 1em;
 }
 
 .close {
+    border-radius: 10px;
+    border: color-mix(in srgb, var(--misty-pink), transparent 50%) solid 1px;
     position: relative;
     background-color: #fbdada;
     border-color: #fbdada;
     width: 7.5em;
     height: 2em;
-    bottom: 46.75%;
 }
 
 .button {
     position: relative;
     height: 2em;
     width: 7.5em;
-    top: -25%;
-    left: 25%;
     background-color: #fbdada;
     border-color: #fbdada;
 }
@@ -48,4 +45,24 @@
     border-radius: 3px;
     padding: .5em;
     color: var(--foreground)
+}
+
+.barContainer {
+    height: 2.5em;
+    top: 0;
+    left: 0;
+}
+
+.barButtonsContainer {
+    align-content: center;
+    height: 2.5em;
+    top: 0;
+    left: 0;
+}
+
+.modContainer {
+    position: relative;
+    height: 65%;
+    width: 100%;
+    background-color: color-mix(in srgb, var(--matte-black), transparent 25%) solid 2px;
 }

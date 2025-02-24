@@ -7,8 +7,6 @@ import Sidebar from "../components/sidebar/sidebar";
 import Popup from "../components/popup/popup"
 import { useState } from "react";
 
-const items = await fetch('api/item')
-
 const AdminDashboard = () => {
     const [modifyItemsOpen, setModifyItemsOpen] = useState(false)
 

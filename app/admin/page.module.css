@@ -17,6 +17,8 @@
 }
 
 .modButton {
+    border-radius: 10px;
+    border: color-mix(in srgb, var(--misty-pink), transparent 50%) solid 1px;
     background-color: #fbdada;
     border-color: #fbdada;
     width: 12em;
