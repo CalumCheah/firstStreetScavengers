@@ -7,7 +7,6 @@ import { signup } from '@/app/actions/auth'
 const SignupForm = () => {
     const [state, action, pending] = useActionState(signup, undefined)
 
-
     return (
         <form className={styles.form} action={action}>
             <h1 className={styles.title}>Become a scavenger.</h1>

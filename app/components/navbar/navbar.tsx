@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
-
     return (
         <div className={styles.navbar}>
             <div className={styles.items}>

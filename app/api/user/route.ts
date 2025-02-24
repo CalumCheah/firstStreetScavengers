@@ -15,14 +15,12 @@ export async function POST(request: Request) {
     const req = await request.json()
     const {username, contactInfo, password} = req
 
-    bcrypt
-        .hash(password, saltRounds)
-        .then(async (hash: string) => {
-            await sql(`INSERT INTO "first-street-scavengers"."User" ("username", "contactInfo", "password") VALUES ('${username}', '${contactInfo}', '${hash}')`)
-        })
-        .catch((err: any) => {
-            return Response.json(err)
-        })
-
-    return Response.json(req)
+    try {
+        const hashedPass = await bcrypt.hash(password, saltRounds)
+        await sql(`INSERT INTO "first-street-scavengers"."User" ("username", "contactInfo", "password") VALUES ('${username}', '${contactInfo}', '${hashedPass}')`)
+        const user = await sql(`SELECT "id", "username", "contactInfo" FROM "first-street-scavengers"."User" WHERE "username"='${username}'`)
+        return Response.json(user[0])
+    } catch (error) {
+        return Response.json(error)
+    }
 }

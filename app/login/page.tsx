@@ -2,6 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import styles from "./page.module.css"
 import Link from "next/link";
 import Navbar from "../components/navbar/navbar";
+import LoginForm from "../components/Log In Form/login-form";
 
 const SignUp = () => {
 
@@ -9,17 +10,7 @@ const SignUp = () => {
         <main className={styles.main}>
             <Navbar />
             <div className={styles.login}>
-                <form className={styles.form} >
-                    <h1 className={styles.title}>Ready to scavenge?</h1>
-                    <div className={styles.inputs}>
-                        <label className={styles.label}>Username</label>
-                        <input className={styles.textInput} type="text" id="username" name="username"/>
-                        <label className={styles.label}>Password</label>
-                        <input className={styles.textInput} type="password" id="password" name="password"/>
-                    </div>
-                    <button className={styles.submit} type="submit">Log In</button>
-                    <Link href={"/signup"} className={styles.signup}>Don't have an account? Sign Up.</Link>
-                </form>
+                <LoginForm />
             </div>
         </main>
     )
