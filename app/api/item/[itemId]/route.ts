@@ -8,15 +8,15 @@ export async function DELETE(
 
 	const sql = neon(`${process.env.DATABASE_URL}`);
 
+	// Get item with itemId so that it can be sent as response
 	const data = await sql(`SELECT * FROM "first-street-scavengers"."Item" WHERE "id"=${itemId};`);
 
+	// Delete item with itemId
 	try {
 		await sql(`DELETE FROM "first-street-scavengers"."Item" WHERE "id"=${itemId};`);
 	} catch (e) {
 		return Response.json(e);
 	}
-
-	console.log(Response.json({data}))
 
 	return Response.json({ data })
 }
