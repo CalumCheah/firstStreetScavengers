@@ -29,7 +29,7 @@ const SignupForm = () => {
                     )}
 
                     <label className={styles.label}>Contact Info</label>
-                    <input className={styles.textInput} type="text" id="contact" name="contact" placeholder="e.g. IG tag, phone number, email"/>
+                    <input className={styles.textInput} type="text" id="contactInfo" name="contactInfo" placeholder="e.g. IG tag, phone number, email"/>
                     {state?.errors?.contactInfo && <p>{state.errors.contactInfo}</p>}
                 </div>
             <button className={styles.submit} type="submit">Sign Up</button>
