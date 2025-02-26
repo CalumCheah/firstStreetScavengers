@@ -1,6 +1,6 @@
 import styles from "./page.module.css"
 import Navbar from "../components/navbar/navbar";
-import LoginForm from "../components/Log In Form/login-form";
+import LoginForm from "../components/Log In Form/loginForm";
 
 const SignUp = () => {
 
