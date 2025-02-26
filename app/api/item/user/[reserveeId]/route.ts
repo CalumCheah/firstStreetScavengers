@@ -2,7 +2,7 @@ import { neon } from '@neondatabase/serverless';
 
 export async function GET(
     request: Request,
-    { params }: { params: Promise<{ reserveeId: int }> }
+    { params }: { params: Promise<{ reserveeId: number }> }
 ) {
     const { reserveeId } = await params
 
