@@ -2,7 +2,7 @@ import { neon } from '@neondatabase/serverless';
 
 export async function DELETE(
     request: Request,
-    { params }: { params: Promise<{ itemId: int }> }
+    { params }: { params: Promise<{ itemId: number }> }
 ) {
     const { itemId } = await params
 
