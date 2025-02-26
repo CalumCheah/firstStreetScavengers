@@ -42,19 +42,25 @@ export async function login(state: LoginFormState, formData: FormData) {
         }
     }
 
-    const data = await sql(`SELECT "password", "id" FROM "first-street-scavengers"."User" WHERE "username"='${validatedFields.data.username}'`)
-    const user = data[0]
+    try {
+        const data = await sql(`SELECT "password", "id" FROM "first-street-scavengers"."User" WHERE "username"='${validatedFields.data.username}'`)
+        const user = data[0]
 
-    const validPass: boolean = await bcrypt.compare(validatedFields.data.password, user.password)
+        const validPass: boolean = await bcrypt.compare(validatedFields.data.password, user.password)
 
-    if (!validPass) {
+        if (!validPass) {
+            return {
+                message: "Incorrect username or password.",
+            }
+        }
+
+        await createSession(user.id)
+        redirect('/')
+    } catch {
         return {
-            message: "Incorrect username or passowrd.",
+            message: "Could not find user."
         }
     }
-
-    await createSession(user.id)
-    redirect('/')
 }
 
 export async function logout() {
