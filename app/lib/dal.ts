@@ -1,3 +1,5 @@
+'use server'
+
 import 'server-only'
 
 import { cookies } from 'next/headers'
@@ -28,8 +30,13 @@ export const getUser = cache(async () => {
         const user = data[0]
 
         return user
-    } catch (error) {
+    } catch {
         console.log('Failed to fetch user')
         return null
     }
+})
+
+export const sessionExists = cache(async () =>{
+    const cookieStore = await cookies()
+    return cookieStore.has('session')
 })

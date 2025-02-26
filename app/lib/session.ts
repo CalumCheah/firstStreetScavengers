@@ -1,3 +1,5 @@
+'use server'
+
 import 'server-only'
 import { SignJWT, jwtVerify } from 'jose'
 import { SessionPayload } from '@/app/lib/definitions'
@@ -20,7 +22,7 @@ export async function decrypt(session: string | undefined = '') {
             algorithms: ['HS256'],
         })
         return payload
-    } catch (error) {
+    } catch {
         console.log('Failed to verify session')
     }
 }
@@ -37,4 +39,9 @@ export async function createSession(userId: string) {
         sameSite: 'lax',
         path: '/'
     })
+}
+
+export async function deleteSession() {
+    const cookiesStore = await cookies()
+    cookiesStore.delete('session')
 }

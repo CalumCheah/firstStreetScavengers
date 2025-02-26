@@ -1,11 +1,11 @@
 'use client'
 
 import { useActionState } from 'react'
-import styles from './signup-form.module.css'
+import styles from './signupForm.module.css'
 import { signup } from '@/app/actions/auth'
 
 const SignupForm = () => {
-    const [state, action, pending] = useActionState(signup, undefined)
+    const [state, action] = useActionState(signup, undefined)
 
     return (
         <form className={styles.form} action={action}>
@@ -19,7 +19,7 @@ const SignupForm = () => {
                     <input className={styles.textInput} type="password" id="password" name="password"/>
                     {state?.errors?.password && (
                         <div>
-                            <p>Passoword must:</p>
+                            <p>Password must:</p>
                             <ul>
                                 {state.errors.password.map((error) => (
                                     <li key={error}>- {error}</li>

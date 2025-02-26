@@ -1,11 +1,11 @@
 'use server'
 import { redirect } from "next/navigation";
 import { SignupFormSchema, SignupFormState, LoginFormSchema, LoginFormState } from "../lib/definitions";
-import { createSession } from '@/app/lib/session'
+import { createSession, deleteSession } from '@/app/lib/session'
 import { neon } from '@neondatabase/serverless';
+import bcrypt from "bcrypt"
 
 const sql = neon(`${process.env.DATABASE_URL}`);
-const bcrypt = require('bcrypt')
 
 export async function signup(state: SignupFormState, formData: FormData) {
     const validatedFields = SignupFormSchema.safeParse({
@@ -55,4 +55,9 @@ export async function login(state: LoginFormState, formData: FormData) {
 
     await createSession(user.id)
     redirect('/')
+}
+
+export async function logout() {
+    deleteSession()
+    redirect('/login')
 }

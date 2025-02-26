@@ -1,7 +1,6 @@
-import { neon } from "@neondatabase/serverless";
 import styles from "./page.module.css"
 import Navbar from "../components/navbar/navbar";
-import SignupForm from "../components/Sign Up Form/signup-form";
+import SignupForm from "../components/Sign Up Form/signupForm";
 
 const SignUp = () => {
     return (
