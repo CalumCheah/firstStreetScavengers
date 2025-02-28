@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Navbar from "../components/navbar/navbar";
 import { isAdmin } from "../lib/dto";
 import UserDashboard from "../components/User Dashboard/userDashboard";
+import AdminDashboard from "../components/adminDash/adminDashboard";
 
 
 const Dashboard = async () => {
@@ -10,7 +11,7 @@ const Dashboard = async () => {
     return (
         <main className={styles.main}>
             <Navbar />
-            {admin ? 'admin' : <UserDashboard />}
+            {admin ? <AdminDashboard /> : <UserDashboard />}
         </main>
     )
 }
